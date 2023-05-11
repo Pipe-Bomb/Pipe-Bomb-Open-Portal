@@ -46,7 +46,11 @@ export default function WebInterface(props: WebInterfaceProps) {
                 <h1 className={styles.name}>{ props.url }</h1>
                 <Button auto className={styles.delete} light onPress={props.onDelete}><MdOutlineDelete /></Button>
             </div>
-            <a href={`//${props.url}/${decodeUrl(location.hash)}`}><Button auto size="lg" color="secondary" disabled={state != "online"}>Launch</Button></a>
+            {state == "online" ? (
+                <a href={`//${props.url}/${decodeUrl(location.hash)}`}><Button auto size="lg" color="secondary">Launch</Button></a>
+            ) : (
+                <Button auto size="lg" color="secondary" disabled={true}>Launch</Button>
+            )}
         </div>
     )
 }
