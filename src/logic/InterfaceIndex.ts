@@ -20,7 +20,7 @@ export function loadInterfaces() {
             }
         } else {
             // add default interfaces
-            interfaces.push("mobile.pipebomb.net");
+            // interfaces.push("mobile.pipebomb.net");
             interfaces.push("pipebomb.net");
             localStorage.setItem("interfaces", JSON.stringify(interfaces));
         }
