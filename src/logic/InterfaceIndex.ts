@@ -19,7 +19,8 @@ export function loadInterfaces() {
                 localStorage.setItem("interfaces", JSON.stringify(interfaces));
             }
         } else {
-            // add default server
+            // add default interfaces
+            interfaces.push("mobile.pipebomb.net");
             interfaces.push("pipebomb.net");
             localStorage.setItem("interfaces", JSON.stringify(interfaces));
         }
